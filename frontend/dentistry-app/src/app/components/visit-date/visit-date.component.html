@@ -1,0 +1,18 @@
+<div class="visit">
+  <div class="container">
+    <div class="visit-inner">
+      <h5 class="visit-title">
+        Выбор времени для записи
+      </h5>
+      <label class="name-label">Выберите дату: </label>
+      <input (change)="freeHours()" class="name-input" type="date" class="form-control" id="visitdate"
+        [(ngModel)]="date" [(ngModel)]="visit.dateOfVisit" name="visitdate">
+      <label class="lastname-label">Выберите время посещения: </label>
+      <select class="form-select" id="inputState" name="visithour" [(ngModel)]="choosenTime">
+        <option *ngIf="hours.length == 0" disabled>На этот день нет приема</option>
+        <option *ngFor="let hour of hours" value="{{hour}}">{{hour}}</option>
+      </select>
+      <button (click)="addVisit()" (click)="sendMessage()" class="btn">Записаться</button>
+    </div>
+  </div>
+</div>

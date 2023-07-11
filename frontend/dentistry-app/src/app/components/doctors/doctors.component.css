@@ -1,0 +1,72 @@
+.container{
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0px 10px;
+}
+
+.doctors-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doctor-card{
+  width: 45%;
+  background-color: #d3cfcf;
+  color: #000;
+  border-radius: 20px;
+  margin:0 20px 50px;
+  padding: 20px;
+}
+
+.card-top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-left{
+  width: 197px;
+}
+.card-left img{
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+}
+.card-right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+}
+.right-top{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  font-size: 20px;
+  margin: 20px 10px 5px;
+}
+.right-bottom{
+  margin: 5px 10px 5px;
+}
+.card-right-item{
+  margin-right: 5px;
+  margin-bottom: 7px;
+
+}
+.card-btn{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  background-color: #1b5773;
+  margin-top: 20px;
+  padding: 5px 0;
+  border-radius: 10px;
+  transition: all .5s;
+}
+.card-btn:hover{
+  background-color: #ae3d8d;
+  cursor: pointer;
+}

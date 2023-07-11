@@ -1,0 +1,30 @@
+.container{
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0px 10px;
+}
+.admin-inner{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 30px;
+
+}
+.admin-card{
+  height: 200px;
+  width: 350px;
+  border-radius: 20px;
+  border: 2px solid #000;
+
+}
+.admin-card:hover{
+  border: 2px solid #1b5773;
+  color: #1b5773;
+}
+.admin-card-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: auto 0;
+}

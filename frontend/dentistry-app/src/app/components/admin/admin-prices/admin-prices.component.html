@@ -1,0 +1,20 @@
+<div class="prices">
+  <div class="container">
+    <div class="prices-inner">
+      <div class="prices-desc">
+        <h3 class="desc-title">Наименование услуги</h3>
+        <div class="desc-price">Цена(руб)</div>
+      </div>
+      <a href="#" *ngFor=" let price of prices" class="prices-item">
+        <div class="item-name">{{price.name}}</div>
+        <div class="item-price"><span>От </span>{{price.price}} <span>руб.</span></div>
+        <div class="action">
+          <a class="action-update action-btn" (click)="toUpdatePrice(price.id)">Редактировать</a>
+        </div>
+      </a>
+      <a routerLink="/admin-price-add" class="prices-item price-add">
+        <div class="add"></div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="doctor-add">
+  <div class="container">
+    <div class="doctor-add-inner">
+      <h5 class="add-title">Изменение данных</h5>
+      <label class="name-label">Название: </label>
+      <input class="name-input" type="text" [(ngModel)]="price.name" name="name">
+      <label class="price-label">Стоимость: </label>
+      <input class="price-input" type="number" [(ngModel)]="price.price" name="price">
+      <div class="add-bottom">
+        <a class="btn btn-delete" (click)="deletePrice()">Удалить</a>
+        <a class="btn btn-add" (click)="updatePrice()">Изменить данные</a>
+      </div>
+    </div>
+  </div>
+</div>

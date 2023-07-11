@@ -1,0 +1,21 @@
+<div class="appointment">
+  <div class="container">
+    <div class="appointment-inner">
+      <h5 class="appointment-title">
+        Запись к специалисту
+      </h5>
+      <label class="name-label">Укажите ваше имя: </label>
+      <input class="name-input" type="text" [(ngModel)]="patient.name">
+      <label class="lastname-label">Укажите вашу фамилию: </label>
+      <input class="lastname-input" type="text" [(ngModel)]="patient.lastname">
+      <label class="comment-label">Укажите причину записи на прием: </label>
+      <input class="comment-input" type="text" [(ngModel)]="patient.comment">
+      <label for="inputState" class="form-label">Специалист: </label>
+      <select class="form-select" id="inputState" name="doctors" [(ngModel)]="patient.doctor_id">
+        <option disabled>Выберите специалиста</option>
+        <option *ngFor="let doctor of doctors" value="{{doctor.id}}">{{doctor.name}} {{doctor.lastname}}</option>
+      </select>
+      <button (click)="addPatient()" class="btn">Далее</button>
+    </div>
+  </div>
+</div>

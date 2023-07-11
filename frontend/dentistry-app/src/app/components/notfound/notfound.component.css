@@ -1,0 +1,15 @@
+.container{
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0px 10px;
+}
+
+.notfound-tilte{
+  font-size: 60px;
+  text-align: center;
+}
+.notfound-text-1{
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: center;
+}

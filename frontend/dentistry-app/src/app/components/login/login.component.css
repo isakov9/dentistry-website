@@ -1,0 +1,45 @@
+.container{
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.label-username{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.input-username{
+  border: 1px solid #000;
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.label-password{
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.input-password{
+  border: 1px solid #000;
+  width: 400px;
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+input[type="password"]{
+  text-align: center;
+}
+input[type="text"]{
+  text-align: center;
+}
+.btn:hover{
+  cursor: pointer;
+  border: 1px solid #1b5773;
+}
+.btn{
+  padding: 13px 175px;
+  border: 1px solid #1b5773;
+  border-radius: 20px;
+}

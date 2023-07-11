@@ -1,0 +1,31 @@
+.container{
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0px 10px;
+}
+
+.about-title{
+  font-size: 28px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 35px;
+}
+.about-content{
+  margin-bottom: 65px;
+}
+.about-text{
+  margin-bottom: 10px;
+}
+
+.about-images{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-image{
+  width: 30%;
+  border-radius: 20px;
+  height: 230px;
+  margin-bottom: 50px;
+}

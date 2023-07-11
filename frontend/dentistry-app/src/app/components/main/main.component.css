@@ -1,0 +1,195 @@
+.container{
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0px 10px;
+}
+.main-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.main-conent{
+  width: 50%;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.subtitle{
+  margin-top: 60px;
+  font-size: 25px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+.title{
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 74px;
+  margin-top: 30px;
+}
+.main-items{
+  margin-top: 25px;
+}
+.main-item{
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.item-text{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.main-icon{
+  width: 20px;
+  height: 20px;
+  margin-right: 7px;
+}
+.main-img{
+  width: 50%;
+}
+.main-img img{
+  border-top-left-radius:35%;
+  border-bottom-left-radius:35%;
+  height: 500px;
+
+}
+.main-btn{
+  margin-top: 25px;
+  display: flex;
+}
+.btn{
+  color: white;
+  padding: 15px 50px;
+  background-color: #1b5773;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 300;
+  transition: all .3s;
+  height: 52px;
+  width: 317px;
+  border-radius: 20px;
+}
+
+.btn:hover{
+  background-color: #ae3d8d;
+  cursor: pointer;
+}
+
+.services{
+  margin-top: 150px;
+}
+.services-inner{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.services-title{
+  font-size: 32px;
+  font-weight: 700;
+
+}
+.service-cards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+.service-card{
+  font-family: 'Righteous', cursive;
+  width: 33%;
+  text-align: center;
+  margin-top: 25px;
+}
+.card-icon{
+  margin-bottom: 20px;
+}
+.card-title{
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: rgb(69, 83, 99);
+}
+.card-text{
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.primary_care{
+  margin-top: 100px;
+  background: url('../../../assets/images/toothbrush.jpg');
+  background-position: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+.primary_care:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+.primary_care-inner{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Righteous', cursive;
+}
+.primary_care-title{
+  font-size: 32px;
+  max-width: 750px;
+  margin:  auto;
+  z-index: 50;
+}
+.primary_care-text{
+  max-width: 1000px;
+  margin: auto;
+  z-index: 50;
+}
+.convenience{
+  margin-bottom: 100px;
+  background-color: #f2f2f2;
+  padding: 30px 0;
+}
+.convenience-title{
+  font-family: 'Righteous', cursive;
+  font-size: 32px;
+  width: 700px;
+  margin: 0 auto 45px;
+
+}
+.convenience-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.convenience-card{
+
+  width: 30%;
+}
+.card-img{
+  align-items: center;
+  height: 208px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.card-text{
+  font-family: 'Righteous', cursive;
+  font-size: 18px;
+}

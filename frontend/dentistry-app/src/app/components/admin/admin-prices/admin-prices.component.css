@@ -1,0 +1,96 @@
+.container{
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0px 10px;
+}
+.prices-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.prices-desc{
+  min-width: 700px;
+  background-color: #1b5773;
+  color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+}
+
+.prices-item{
+  min-width: 700px;
+  background-color: #d3cfcf;
+  color: #000;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+}
+
+.price-add{
+  height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+}
+.price-add:hover{
+  transform: scale(1.2);
+}
+.add{
+  height: 30px;
+  width: 30px;
+  background-color: #1b5773;
+  border-radius: 50%;
+  position: relative;
+
+}
+
+
+.add::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  background-color: #fff;
+  top: 47%;
+  left: 24%;
+}
+.add::before{
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 16px;
+  background-color: #fff;
+  top: 24%;
+  left: 47%;
+}
+
+.action{
+  font-size: 10px;
+}
+
+.action-update{
+  margin-right: 7px;
+  padding: 3px 9px;
+  background-color: #1b5773;
+  border-radius: 10px;
+  color: #fff;
+  transition: all .5s;
+}
+.action-btn{
+  padding: 3px 9px;
+  background-color: #1b5773;
+  border-radius: 10px;
+  color: #fff;
+  transition: all .5s;
+}
+.action-btn:hover{
+  background-color: #ae3d8d;
+}

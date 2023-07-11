@@ -1,0 +1,31 @@
+<div class="doctors">
+  <div class="container">
+    <div class="doctors-inner">
+      <div *ngFor="let doctor of doctors" class="doctor-card">
+        <div class="card-top">
+          <div class="card-left"><img src="../../../../assets/doctors-images/doctor-{{doctor.id}}.jpg"></div>
+          <div class="card-right">
+            <div class="right-top">
+              <div class="card-right-item card-lastname">{{doctor.lastname}}</div>
+              <div class="card-right-item card-name">{{doctor.name}}</div>
+              <div class="card-right-item card-surname">{{doctor.surname}}</div>
+            </div>
+            <div class="right-bottom">
+              <div class="card-right-item card-speciality">{{doctor.speciality}}</div>
+              <div class="card-right-item card-age"><span>Возраст: </span>{{doctor.age}}</div>
+              <div class="card-right-item card-experience"><span>Стаж: </span>{{doctor.experience}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <a (click)="toUpdateDoctor(doctor.id)" class="card-btn">Редактировать</a>
+        </div>
+      </div>
+      <div class="doctor-card doctor-add">
+        <a routerLink="/admin-doctor-add" class="btn-add">
+          <div class="add"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

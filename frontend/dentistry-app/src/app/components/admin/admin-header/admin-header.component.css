@@ -1,0 +1,30 @@
+.header{
+  background-color:#1b5773;
+  margin-bottom: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 51;
+  color: white;
+}
+.container{
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0px 10px;
+}
+
+.header-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  font-size: 22px;
+
+}
+.logo{
+  margin-left: 10px;
+
+}
+
+.logout:hover{
+  cursor: pointer;
+}

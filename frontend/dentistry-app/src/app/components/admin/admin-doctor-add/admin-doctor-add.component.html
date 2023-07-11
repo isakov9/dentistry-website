@@ -1,0 +1,29 @@
+<div class="doctor-add">
+  <div class="container">
+    <div class="doctor-add-inner">
+      <h5 class="add-title">Добавить доктора</h5>
+      <label class="name-label">Имя: </label>
+      <input class="name-input" type="text" [(ngModel)]="doctor.name" name="name" placeholder="Введите имя...">
+      <label class="lastname-label">Фамилия: </label>
+      <input class="lastname-input" type="text" [(ngModel)]="doctor.lastname" name="lastname"
+        placeholder="Введите фамилию...">
+      <label class="surname-label">Отчество: </label>
+      <input class="surname-input" type="text" [(ngModel)]="doctor.surname" name="surname"
+        placeholder="Введите отчество...">
+      <label class="surname-label">Email: </label>
+      <input class="surname-input" type="text" [(ngModel)]="doctor.email" name="email" placeholder="Введите email...">
+      <label class="speciality-label">Специальность: </label>
+      <input class="speciality-input" type="text" [(ngModel)]="doctor.speciality" name="speciality"
+        placeholder="Введите специальность...">
+      <label class="age-label">Возраст: </label>
+      <input class="age-input" type="text" [(ngModel)]="doctor.age" name="age" placeholder="Введите возраст...">
+      <label class="experience-label">Стаж:</label>
+      <input class="experience-input" type="text" [(ngModel)]="doctor.experience" name="experience"
+        placeholder="Введите стаж...">
+      <div class="add-bottom">
+        <a routerLink="/admin-doctors" class="btn btn-back">Назад</a>
+        <a class="btn btn-add" (click)="addDoctor()">Добавить</a>
+      </div>
+    </div>
+  </div>
+</div>
