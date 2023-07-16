@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,7 @@ import { AdminPricesAddComponent } from './components/admin/admin-prices-add/adm
 import { AdminPricesUpdateComponent } from './components/admin/admin-prices-update/admin-prices-update.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { VisitDateComponent } from './components/visit-date/visit-date.component';
+import { RequestInterceptor } from './request.interceptor';
 
 
 @NgModule({
@@ -53,7 +54,7 @@ import { VisitDateComponent } from './components/visit-date/visit-date.component
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

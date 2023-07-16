@@ -1,23 +1,31 @@
 package com.dentistryapp.dentistry.controllers;
 
+import com.dentistryapp.dentistry.dto.AdminDTO;
+import com.dentistryapp.dentistry.dto.ResponseDTO;
+import com.dentistryapp.dentistry.session.InMemorySessionRegistry;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @CrossOrigin(origins = {"*"}, maxAge = 4800, allowCredentials = "false")
-
-@RequiredArgsConstructor
+@RequestMapping("/api")
 public class LoginController {
-
+    @Autowired
+    public AuthenticationManager authenticationManager;
+    @Autowired
+    public InMemorySessionRegistry sessionRegistry;
     @PostMapping("/login")
-    public ResponseEntity<Boolean> login(@RequestBody String password){
-        if(password.equals("admin")){
-            return ResponseEntity.ok(true);
-        }
-        return ResponseEntity.ok(false);
+    public ResponseEntity<ResponseDTO> login(@RequestBody AdminDTO admin){
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(admin.getUsername(), admin.getPassword())
+        );
+        final String sessionId = sessionRegistry.registerSession(admin.getUsername());
+        ResponseDTO response = new ResponseDTO();
+        response.setSessionId(sessionId);
+        return ResponseEntity.ok(response);
     }
 }

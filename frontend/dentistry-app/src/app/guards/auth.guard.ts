@@ -17,11 +17,14 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot
   ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     if (state.url == "/admin") return true;
-    if (!this.isAdmin) {
-      this.router.navigate(['404'])
+
+    let token = sessionStorage.getItem('token');
+
+    if (!token) {
+      this.router.parseUrl('/404')
       return false
     }
-    return this.isAdmin;
+    return true;
 
   }
 
