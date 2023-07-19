@@ -3,7 +3,6 @@ package com.dentistryapp.dentistry.controllers;
 import com.dentistryapp.dentistry.dto.AdminDTO;
 import com.dentistryapp.dentistry.dto.ResponseDTO;
 import com.dentistryapp.dentistry.session.InMemorySessionRegistry;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

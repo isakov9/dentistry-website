@@ -9,15 +9,16 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.Optional;
-import java.util.zip.DataFormatException;
+
 
 @Service
 public class ImageService {
 
     @Autowired
     private ImageRepository imageRepository;
-    public String uploadImage(MultipartFile file) throws IOException {
+    public String uploadImage(MultipartFile file, Long id) throws IOException {
         Image image = imageRepository.save(Image.builder()
+                .doctor_id(id)
                 .name(file.getOriginalFilename())
                 .type(file.getContentType())
                 .imageData(ImageUtils.compressImage(file.getBytes())).build());
@@ -29,8 +30,6 @@ public class ImageService {
 
     }
 
-    public byte[] downloadImage(String fileName) throws DataFormatException {
-        Optional<Image> imageData = imageRepository.findByName(fileName);
-        return ImageUtils.decompressImage(imageData.get().getImageData());
-    }
+
+    public Optional<Image> findByDoctor_id(Long id){return  imageRepository.findByDoctor_id(id);}
 }

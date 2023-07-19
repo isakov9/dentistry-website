@@ -17,16 +17,16 @@ export class DoctorService {
   getDoctorById(id: number): Observable<Doctor> {
     return this.http.get<Doctor>(this.BASE_URL + `/${id}`)
   }
-  addDoctor(doctor: Doctor): Observable<Object> {
-    return this.http.post(this.BASE_URL, doctor)
+  addDoctor(doctor: Doctor): Observable<Doctor> {
+    return this.http.post<Doctor>(this.BASE_URL, doctor)
   }
 
   updateDoctor(doctor: Doctor, id: number): Observable<Object> {
     return this.http.put(this.BASE_URL + "/" + id, doctor)
   }
 
-  deleteDoctor(id: number): Observable<Object> {
-    return this.http.delete(this.BASE_URL + "/" + id)
+  deleteDoctor(id: number) {
+    return this.http.delete(this.BASE_URL + "/" + id, { responseType: 'text' })
   }
 
 }

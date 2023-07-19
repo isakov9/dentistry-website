@@ -3,7 +3,7 @@
     <div class="doctors-inner">
       <div *ngFor="let doctor of doctors" class="doctor-card">
         <div class="card-top">
-          <div class="card-left"><img src="../../../../assets/doctors-images/doctor-{{doctor.id}}.jpg"></div>
+          <div class="card-left"><img [src]="imageUrls[doctor.id]" alt=imageUrls[doctor.id]></div>
           <div class="card-right">
             <div class="right-top">
               <div class="card-right-item card-lastname">{{doctor.lastname}}</div>

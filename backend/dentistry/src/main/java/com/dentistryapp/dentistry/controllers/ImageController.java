@@ -1,16 +1,17 @@
 package com.dentistryapp.dentistry.controllers;
 
+import com.dentistryapp.dentistry.models.Image;
 import com.dentistryapp.dentistry.services.ImageService;
-import lombok.RequiredArgsConstructor;
+import com.dentistryapp.dentistry.utils.ImageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.Optional;
 import java.util.zip.DataFormatException;
 
 @Controller
@@ -21,14 +22,22 @@ public class ImageController {
     @Autowired
     private ImageService imageService;
     @PostMapping
-    public ResponseEntity<?> uploadImage(@RequestParam("image")MultipartFile file) throws IOException{
-        String uploadImage = imageService.uploadImage(file);
+    public ResponseEntity<?> uploadImage(@RequestParam("image")MultipartFile file,
+                                         @RequestParam ("id") Long id) throws IOException{
+        System.out.println(id);
+        String uploadImage = imageService.uploadImage(file, id);
         return ResponseEntity.ok(uploadImage);
     }
-    @GetMapping("/{fileName}")
 
-    public ResponseEntity<?> downloadImage(@PathVariable String fileName) throws DataFormatException {
-        byte[] imageData = imageService.downloadImage(fileName);
-        return ResponseEntity.ok(imageData);
+
+    @GetMapping("/{id}")
+    public ResponseEntity<byte[]> getImage(@PathVariable("id") Long id) throws DataFormatException {
+
+    final Optional<Image> dbImage = imageService.findByDoctor_id(id);
+
+    return ResponseEntity
+            .ok()
+            .contentType(MediaType.valueOf(dbImage.get().getType()))
+            .body(ImageUtils.decompressImage(dbImage.get().getImageData()));
     }
 }

@@ -24,6 +24,7 @@ import { AdminPricesUpdateComponent } from './components/admin/admin-prices-upda
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { VisitDateComponent } from './components/visit-date/visit-date.component';
 import { RequestInterceptor } from './request.interceptor';
+import { ImagetestComponent } from './components/imagetest/imagetest.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { RequestInterceptor } from './request.interceptor';
     AdminPricesUpdateComponent,
     AppointmentComponent,
     VisitDateComponent,
+    ImagetestComponent,
   ],
   imports: [
     BrowserModule,

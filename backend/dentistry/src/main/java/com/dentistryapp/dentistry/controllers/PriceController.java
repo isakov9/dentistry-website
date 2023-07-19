@@ -1,6 +1,5 @@
 package com.dentistryapp.dentistry.controllers;
 
-import com.dentistryapp.dentistry.models.Doctor;
 import com.dentistryapp.dentistry.models.Price;
 import com.dentistryapp.dentistry.services.PriceService;
 import lombok.RequiredArgsConstructor;

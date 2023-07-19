@@ -20,10 +20,13 @@
       <label class="experience-label">Стаж:</label>
       <input class="experience-input" type="text" [(ngModel)]="doctor.experience" name="experience"
         placeholder="Введите стаж...">
+      <label class="image-label">Добавьте фото:</label>
+      <input class="iamge-input" type="file" multiple value="select" #selectFile (change)="onImageUpload($event)">
       <div class="add-bottom">
-        <a class="btn btn-delete" (click)="deleteDoctor()">Удалить</a>
-        <a class="btn btn-add" (click)="updateDoctor()">Изменить данные</a>
+        <div class="add-bottom">
+          <a class="btn btn-delete" (click)="deleteDoctor()">Удалить</a>
+          <a class="btn btn-add" (click)="updateDoctor()">Изменить данные</a>
+        </div>
       </div>
     </div>
   </div>
-</div>

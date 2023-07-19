@@ -16,6 +16,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 import { VisitDateComponent } from './components/visit-date/visit-date.component';
+import { ImagetestComponent } from './components/imagetest/imagetest.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'prices', component: PricesComponent },
   { path: 'appointment', component: AppointmentComponent },
   { path: 'visitdate', component: VisitDateComponent },
+  { path: 'image', component: ImagetestComponent }, // delete
 
   {
     path: 'admin',

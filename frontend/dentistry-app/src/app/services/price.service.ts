@@ -26,7 +26,7 @@ export class PriceService {
     return this.http.put(this.BASE_URL + "price/" + id, price)
   }
 
-  deletePrice(id: number): Observable<Object> {
-    return this.http.delete(this.BASE_URL + "price/" + id)
+  deletePrice(id: number) {
+    return this.http.delete(this.BASE_URL + "price/" + id, { responseType: 'text' })
   }
 }

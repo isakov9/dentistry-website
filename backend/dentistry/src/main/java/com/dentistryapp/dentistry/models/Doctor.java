@@ -27,7 +27,8 @@ public class Doctor {
     private String age;
 
     private String experience;
-    private String image;
+    @OneToOne(mappedBy = "doctor", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Image image;
 
     @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
